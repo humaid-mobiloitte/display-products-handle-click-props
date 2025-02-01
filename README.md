@@ -1,8 +1,9 @@
-# React + Vite
+# Car Details Display
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that displays a list of cars and allows users to click on a car's name to view its details.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Displays a list of cars with their name, color, type, and capacity.
+- Click on a car name to view detailed information.
+- Uses React state (`useState`) to manage selected car details.
+- Component-based architecture with `DisplayProducts` and `Main`.
