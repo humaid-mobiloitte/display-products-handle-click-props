@@ -1,6 +1,8 @@
 import React from 'react'
 import DisplayProducts from './displayProducts'
 import { useState } from 'react'
+import { Box, Container, Typography } from '@mui/material'
+import styles from './styles/style'
 const ProductList=[
     {   
         "image":"https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kylaq/11528/1733225175669/front-left-side-47.jpg?imwidth=420&impolicy=resize",
@@ -46,13 +48,15 @@ function Main() {
     }
     return (
         <>
-            <DisplayProducts cars={ProductList} clickHandler={clickHandler}/>
-            <div>
-                <div>Car name: {displayValue.name}</div>
-                <div>Car color: {displayValue.color}</div>
-                <div>Car type: {displayValue.type}</div>
-                <div>Car capacity: {displayValue.capacity}</div>
-            </div>
+            <Container >
+                <DisplayProducts cars={ProductList} clickHandler={clickHandler}/>
+                <Box>
+                    <Typography sx={styles.normalText}>Car name: {displayValue.name}</Typography>
+                    <Typography sx={styles.normalText}>Car color: {displayValue.color}</Typography>
+                    <Typography sx={styles.normalText}>Car type: {displayValue.type}</Typography>
+                    <Typography sx={styles.normalText}>Car capacity: {displayValue.capacity}</Typography>
+                </Box>
+            </Container>
         </>
     )
 }
